@@ -21,4 +21,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/dashboard', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('playlistAdd');
+    Route::post('/dashboard', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('playlistAdding');
+
+
+});
+}
+
 require __DIR__.'/auth.php';

@@ -10,6 +10,15 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
+                    <form method="POST" action="/dashboard">
+
+                        <x-button class="ml-4">
+                            {{ __('Send notification') }}
+                        </x-button>
+
+
+                    </form>
+
                 </div>
             </div>
         </div>
