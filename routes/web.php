@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Providers\RouteServiceProvide;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,17 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/Dashboard', function () {
+    return view('Dashboard');
+})->middleware(['auth'])->name('Dashboard');
 
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/dashboard', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('playlistAdd');
-    Route::post('/dashboard', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('playlistAdding');
+
+
+    Route::get('/notificationPage', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('NotificationButton');
+    Route::post('/notificationPage', [App\Http\Controllers\NotificationController::class, 'SendingNotification'])->name('SendingNotification');
 
 
 });
-}
+
 
 require __DIR__.'/auth.php';
