@@ -47,7 +47,8 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        // disable logging in automatically after register, to prevent spammers
+        // Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }
