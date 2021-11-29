@@ -13,7 +13,7 @@ class NotificationController extends Controller
 
     public function SendingNotification(){
         WebhookCall::create()
-            ->url('https://maker.ifttt.com/trigger/request_send/with/key/gZ4uDUwI-xu9rBDg6pYkUgVIjgB-my-h084JAK2cb4f')
+            ->url(env('WEBHOOK_LINK'))
             ->payload(['key' => 'value'])
             ->useSecret('sign-using-this-secret')
             ->throwExceptionOnFailure()
