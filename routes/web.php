@@ -22,11 +22,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::group(['middleware' => ['auth', 'verified'] ], function() {
+Route::group(['middleware' => ['auth', 'verified', 'role:admin'] ], function() {
 
 
     Route::get('/notificationPage', [App\Http\Controllers\NotificationController::class, 'notificationButton'])->name('NotificationButton');
     Route::post('/notificationPage', [App\Http\Controllers\NotificationController::class, 'SendingNotification'])->name('SendingNotification');
+
+    Route::get('/adminPage', [App\Http\Controllers\adminController::class, 'adminPage'])->name('adminPage');
+    Route::get('/addAdmin/{id}', [App\Http\Controllers\adminController::class, 'addAdmin'])->name('addAdmin');
+
+
 
 
 });
