@@ -32,4 +32,23 @@ class adminController extends Controller
 
         return view('dashboard')->with('info', 'User admin gemaakt.');
     }
+
+    public function removeAdmin($id){
+
+
+
+        $u = User::find($id);
+
+
+
+        if ($u != null) {
+            $u->revokeRole('admin');
+        }
+
+
+
+
+
+        return view('dashboard');
+    }
 }

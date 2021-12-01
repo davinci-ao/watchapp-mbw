@@ -15,9 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @role('admin')
                     <x-nav-link :href="route('NotificationButton')" :active="request()->routeIs('notificationPage')">
                         {{ __('notification button') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('adminPage')" :active="request()->routeIs('adminPage')">
+                        {{ __('Admin') }}
+                    </x-nav-link>
+
+                    @endrole
                 </div>
             </div>
 

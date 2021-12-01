@@ -31,6 +31,10 @@ Route::group(['middleware' => ['auth', 'verified', 'role:admin'] ], function() {
     Route::get('/adminPage', [App\Http\Controllers\adminController::class, 'adminPage'])->name('adminPage');
     Route::get('/addAdmin/{id}', [App\Http\Controllers\adminController::class, 'addAdmin'])->name('addAdmin');
 
+    Route::get('/removeAdmin', [App\Http\Controllers\adminController::class, 'adminPage'])->name('adminPage');
+    Route::get('/removeAdmin/{id}', [App\Http\Controllers\adminController::class, 'removeAdmin'])->name('removeAdmin');
+
+
 
 
 

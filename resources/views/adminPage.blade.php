@@ -13,7 +13,8 @@
                     <tr>
                         <th scope="col">User Name</th>
                         <th scope="col">User Id</th>
-                        <th scope="col">Roles</th>
+                        <th scope="col">Add admin</th>
+                        <th scope="col">remove admin</th>
                     </tr>
                 <div class="p-6 bg-white border-b border-gray-200">
 
@@ -24,6 +25,8 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->id}}</td>
                                 <td><a href="/addAdmin/{{$user->id}}">Add to playlist</a></td>
+                                <td><a href="/removeAdmin/{{$user->id}}">Add to playlist</a></td>
+
                             </tr>
                         @endforeach
                     </table>
