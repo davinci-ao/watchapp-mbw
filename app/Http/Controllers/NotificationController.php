@@ -18,22 +18,16 @@ class NotificationController extends Controller
         return view('notificationPage');
     }
 
-//    public function SendingNotification(){
-//        WebhookCall::create()
-//            ->url(env('WEBHOOK_LINK'))
-//            ->payload(['key' => 'value'])
-//            ->useSecret('sign-using-this-secret')
-//            ->throwExceptionOnFailure()
-//            ->dispatch();
-//        return view('dashboard');
-//        }
-
     public function SendingNotification(){
-
-        auth()->user()->addRole('admin');
-
-
+        WebhookCall::create()
+            ->url(env('WEBHOOK_LINK'))
+            ->payload(['key' => 'value'])
+            ->useSecret('sign-using-this-secret')
+            ->throwExceptionOnFailure()
+            ->dispatch();
         return view('dashboard');
-    }
+        }
+
+
 
 }

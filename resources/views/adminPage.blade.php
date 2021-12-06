@@ -24,8 +24,8 @@
                             <tr>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->id}}</td>
-                                <td><a href="/addAdmin/{{$user->id}}">Add to playlist</a></td>
-                                <td><a href="/removeAdmin/{{$user->id}}">Add to playlist</a></td>
+                                <td><a href="/addAdmin/{{$user->id}}">Add admin</a></td>
+                                <td><a href="/removeAdmin/{{$user->id}}">remove admin</a></td>
 
                             </tr>
                         @endforeach
