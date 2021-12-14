@@ -2,6 +2,10 @@
 
 return [
 
+    //firebase for laravel:
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -161,6 +165,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+
+        //firebase for laravel
+        Kreait\Laravel\Firebase\ServiceProvider::class,
 
         /*
          * Package Service Providers...

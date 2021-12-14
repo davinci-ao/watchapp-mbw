@@ -20,15 +20,20 @@
 
 
 
-                        @foreach($Users as $user)
+                        @forelse($Users['data'] as $key => $item)
                             <tr>
-                                <td>{{$user->name}}</td>
-                                <td>{{$user->id}}</td>
-                                <td><a href="/addAdmin/{{$user->id}}">Add admin</a></td>
-                                <td><a href="/removeAdmin/{{$user->id}}">remove admin</a></td>
+                                <td>{{ $item['name'] }}</td>
+                                <td>{{ $item['id'] }}</td>
+                                <td><a href="/addAdmin/{{ $item['id'] }}">Add admin</a></td>
+                                <td><a href="/removeAdmin/{{ $item['id'] }}">remove admin</a></td>
 
                             </tr>
-                        @endforeach
+                    @empty
+                    <tr>
+                        <td colspan="7">No records found</td>
+                    </tr>
+
+                    @endforelse
                     </table>
 
                 </div>

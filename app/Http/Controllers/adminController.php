@@ -6,14 +6,22 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+use Kreait\Firebase\Database;
 
 
 class adminController extends Controller
 {
+    public function __construct(Database $database)
+    {
+        $this->database = $database;
+        $this->tablename = '11';
+    }
+
     public function adminPage()
     {
-        $Users = User::all();
+//        $Users = User::all();
 
+        $Users = $this->database->getReference($this->tablename)->getValue();
 
 //        dd($Users);
 
