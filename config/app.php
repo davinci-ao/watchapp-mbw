@@ -2,7 +2,6 @@
 
 return [
 
-    //firebase for laravel:
 
 
 

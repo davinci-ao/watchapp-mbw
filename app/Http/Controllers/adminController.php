@@ -9,8 +9,10 @@ use Spatie\Permission\Models\Permission;
 use Kreait\Firebase\Database;
 
 
+
 class adminController extends Controller
 {
+
     public function __construct(Database $database)
     {
         $this->database = $database;
