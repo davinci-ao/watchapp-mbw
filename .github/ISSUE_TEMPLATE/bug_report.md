@@ -1,38 +1,30 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Gemaakt door Peter met MBIAO18A6R en 19A5
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Beschrijf wat er misgaat**
+Een gedetailleerde omschrijving van wat er niet goed werkt
 
-**To Reproduce**
-Steps to reproduce the behavior:
+**Stappen om de bug nogmaals te zien**
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+**Het goede gedrag is:**
+Wat verwacht je dat de applicatie wel doet (het goede of gewenste gedrag)
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Bug is gevonden op**
+ - Browser: (OS: [e.g. iOS], [e.g. chrome, safari], [e.g. 22])
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+**Gevonden en opgelost**
+- Bug is gevonden op (datum) en gevonden door (naam)
+- Bug is opgelost op (datum) en opgelost door (naam) en opgenomen in release (release)
